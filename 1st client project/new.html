@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+  <form action="https://app.hellodesk.com/" method ="GET">
+    <div class="ray-form-item">
+      <div class="ray-select ray-select--with-icon-left ray-select--has-value" id="locations-dropdown-select__container">
+        <label class="ray-select__label" for="locations-dropdown">
+          Find Workspace in
+        </label>
+        <select class="ray-select__input" id="locations-dropdown">
+          <option hidden="" disabled="" selected="" value=""></option>
+          <option data-ray-placeholder="" disabled="" value="">
+            Choose a location
+          </option>
+          <option value="monterey-ca"> Monterey </option>
+          <option value="pacific-grove-ca">Pacific Grove</option>
+        </select>
+      </div>
+    </div>
+    <div class="home-hero__capacity-select ray-form-item">
+      <input type="submit" value="Submit" class="myButton">
+    </div>
+  </form>
+  <script src="main.js"></script>
+</body>
+</html>
+
+

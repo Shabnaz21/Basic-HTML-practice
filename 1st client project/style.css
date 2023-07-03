@@ -1,0 +1,10 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.home-hero__form-segmentation {
+    margin-top: 1.5rem;
+}
+.ray-select--with-icon-left .ray-select__input, .ray-select--with-icon-left .ray-select__label, .ray-select--with-icon-start .ray-select__input, .ray-select--with-icon-start .ray-select__label {
+    padding-left: calc( 0.75rem * 2 + 1rem);
+}

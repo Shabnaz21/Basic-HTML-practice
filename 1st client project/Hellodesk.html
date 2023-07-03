@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      * {margin: 0;padding: 0;box-sizing: border-box;}
+      .home-hero__form-segmentation {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 50px;
+    }
+    .ray-select__input {
+    width: 200px;}
+    .container{
+      margin-top: 100px;
+      padding:32px;
+    }
+    .ray-form-item {
+      margin-bottom: 20px;
+    }
+
+    .ray-select {
+      display: flex;
+      align-items: center;
+      width: 150%;
+      background-color: #f2f2f2;
+      border: 1px solid #ccc;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    .ray-select__icon--start {
+      margin-right: 10px;
+    }
+
+    .ray-select__label {
+      font-size: 16px;
+      font-weight: bold;
+      margin-right: 10px;
+      scroll-padding-right:150px;
+      
+    }
+
+    .ray-select__input {
+      width: 100%;
+      font-size: 16px;
+      padding: 10px;
+      border: none;
+      background-color: transparent;
+    }
+
+    .home-hero__capacity-select {
+      display: flex;
+      align-items: center;
+      margin-top: 2px;
+    }
+
+    .home-hero__button {
+      width: 400%;
+      margin-left: 80px;
+      padding: 20px 100px;
+      background-color: #F6CB16;
+      color: #fff;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+    </style>
+</head>
+<body>
+    <form action ="https://app.hellodesk.com/"class="home-hero__form-segmentation" id="hero-form" method ="GET">
+        <div class="ray-form-item">
+          <div class="ray-select ray-select--with-icon-left ray-select--has-value" id="locations-dropdown-select__container">
+            <select class="ray-select__input" id="locations-dropdown">
+              <option hidden="" disabled="" selected="" value=""></option>
+              <option data-ray-placeholder="" disabled="" value="">Choose a location</option>
+                <optgroup label="California">
+                  <option value="monterey">Monterey</option>
+                  <option value="pacific-grove">Pacific Grove</option>
+                  <option value="salinas">Salinas</option>
+                  <option value="atascadero">Atascadero</option>
+                  <option value="san-francisco">San Francisco</option>
+                  <option value="los-altos">Los Altos</option>
+                  <option value="irvine">Irvine</option>
+                  <option value="ukiah">Ukiah</option>
+                  <option value="poway">Poway</option>
+                  <option value="arroyo-grande">Arroyo Grande</option>
+                  <option value="avila-beach">Avila Beach</option>
+                  <option value="bakersfield">Bakersfield</option>
+                  <option value="big-sur">Big Sur</option>
+                  <option value="brea">Brea</option>
+                  <option value="burlingame">Burlingame</option>
+                  <option value="cambria">Cambria</option>
+                  <option value="carlsbad">Carlsbad</option>
+                  <option value="carmel-highlands">Carmel Highlands</option>
+                  <option value="carmel-valley">Carmel Valley</option>
+                  <option value="carmel-by-the-sea">Carmel-by-the-Sea</option>
+                  <option value="chino Hills">Chino Hills</option>
+                  <option value="citrus Heights">Citrus Heights</option>
+                  <option value="corona">Corona</option>
+                  <option value="elk-grove">Elk Grove</option>
+                  <option value="eureka">Eureka</option>
+                  <option value="gilroy">Gilroy</option>
+                  <option value="greenfield">Greenfield</option>
+                  <option value="hollister">Hollister</option>
+                  <option value="king-city">King City</option>
+                  <option value="los-gatos">Los Gatos</option>
+                  <option value="mill-valley">Mill Valley</option>
+                  <option value="morgan-hill">Morgan Hill</option>
+                  <option value="morro-bay">Morro Bay</option>
+                  <option value="paso-robles">Paso Robles</option>
+                  <option value="pebble-beach">Pebble Beach</option>
+                  <option value="pismo-beach">Pismo Beach</option>
+                  <option value="prunedale">Prunedale</option>
+                  <option value="rancho-cucamonga">Rancho Cucamonga</option>
+                  <option value="riverside">Riverside</option>
+                  <option value="rocklin">Rocklin</option>
+                  <option value="san-luis-obispo">San Luis Obispo</option>
+                  <option value="sand-city">Sand City</option>
+                  <option value="santa-clarita">Santa Clarita</option>
+                  <option value="santa-cruz">Santa Cruz</option>
+                  <option value="santa-maria">Santa Maria</option>
+                  <option value="seaside">Seaside</option>
+                  <option value="soledad">Soledad</option>
+                  <option value="watsonville">Watsonville</option>
+                  <option value="west-covina">West Covina</option>
+                </optgroup>
+            </select>
+          </div>
+        </div>
+        <div class="home-hero__capacity-select ray-form-item">
+          <button type="submit" id="select-location-btn" class="home-hero__button home-hero__button--full-width ray-button ray-button--primary">
+            Start
+          </button>
+        </div>
+      </form>
+    <script>
+      document.querySelector("form").addEventListener("submit", function(e) {
+      e.preventDefault();
+      var select = this.querySelector("select");
+      if (select.value !== "0") {
+        var baseUrl = "https://app.hellodesk.com/locations/";
+        var selectedOption = select.value.toLowerCase().replace(" ", "-");
+        location.href = baseUrl + selectedOption + '-ca';
+      }
+    });
+    </script>
+</body>
+</html>
