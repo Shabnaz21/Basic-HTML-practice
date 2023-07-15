@@ -1,0 +1,241 @@
+* {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.primary-color {
+    color: #FD6E0A;
+}
+.section-title{
+    color: #181818;
+    text-align: center;
+    font-size: 35px;
+    font-weight: 700;
+
+}
+.section-descrpition{
+    color: #757575;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+}
+/* header section */
+.header {
+    list-style: none;
+    background-image: url('images/header_bg.png'), url('images/developer.png');
+    background-color: #FFF8F3;
+    background-repeat: no-repeat;
+    background-position: bottom right, bottom left;
+    margin-bottom: 0;
+    
+}
+
+.btn-primary {
+    color:  #FFF;
+    font-size: 20px;
+    font-weight: 700;
+    border-radius: 5px;
+    background-color: #FD6E0A;
+    border: 0;
+    width: 230px;
+    padding: 10px 30px;
+}
+
+.bananer .profile-pic{
+    width: 580px;
+}
+/* nav section design */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 200px;
+
+}
+
+.nav-title {
+    color: #181818;
+    font-size: 45px;
+    font-weight: 800;
+}
+
+nav>ul {
+    display: flex;
+    align-items: center;
+
+}
+
+nav li {
+    list-style: none;
+    margin-right: 50px;
+}
+nav a{
+    text-decoration: none;
+    color: #474747;
+}
+/* Bananer section */
+.bananer {
+    display: flex;
+    align-items: center;
+    padding: 30px 30px 0px 150px;
+    justify-content: space-between;
+}
+.before-text{
+    color:  #474747;
+    font-size: 45px;
+    margin-bottom: 0;
+    
+}
+.bananer-title{
+    color:  #181818;
+    font-size: 85px;
+    font-weight: 700;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+.bananer-descrpition{
+    color:#757575;
+    margin-bottom: 30px;
+}
+/* Main section */
+main{
+    max-width: 1140px;
+    margin: 0 auto ;
+}
+/* about section */
+.about{
+    background-color: #FFF8F3;
+    border-radius: 10px;
+    padding: 130px;
+    margin: 130px 0;
+}
+.about-info-container{
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+#do-desc{
+    padding: 30px 150px;
+}
+
+.about-info{
+    text-align: center;
+    margin: 5px;
+}
+
+.skill-container{
+    display: flex;
+    gap: 24px ;
+}
+
+.skill{
+    padding: 40px;
+    border-radius: 5px;
+    background: #FFF;
+    box-shadow: 0px 6px 50px 0px rgba(0, 0, 0, 0.06);
+    justify-content: space-between;
+
+}
+.skill-des{
+    color: #757575;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+}
+/* A summary of My Resume */
+.resume-column-title{
+    color:  #474747;
+    font-size: 30px;
+    font-weight: 700;
+
+}
+
+.reume-conatiner{
+    display: flex;
+    gap: 50px;
+}
+
+.resume-column-title{
+    color: #474747;
+    font-size: 25px;
+    font-weight: 700;
+
+}
+.resume-item-institute,resume-item-desce{
+    color: #757575;
+}
+
+.resume-item-institute{
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+.resume-item-desce{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+}
+.resume-cloumn hr{
+    margin: 30px;
+}
+
+.btn-cv{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 110px;
+}
+
+footer{
+    display: flex;
+    background-color: #FFF8F3;
+    gap: 100px;
+    padding: 130px 230px;
+
+}
+.footer-cloumn{
+    width: 50%;
+}
+
+.contact input[type='text'],input[type='email'],textarea {
+    display: block;
+    border-radius: 5px;
+    background-color: #FFF;
+    color:  #757575;
+    margin-bottom: 24px;
+    padding: 18px 35px;
+    font-size: 16px;
+    font-weight: 400;
+    width: 100%;
+    border: 0;
+
+}
+
+
+/* responsive style */
+/* moblie devices */
+
+.hide{
+    display: none;
+}
+@media screen and (max-width:576px){
+    .skill-container, .reume-conatiner, footer{
+        flex-direction: column;
+    }
+    #do-desc{
+        padding: 20px;
+    }
+    footer{
+        padding: 10px;
+    }
+    .footer-cloumn{
+        width: 80%;
+    }
+    .contact input[type='text'],input[type='email'],textarea {
+        width: 100%;
+}
+
+@media screen and (min-width: 576px) and (max-width:960px){
+    .reume-conatiner{
+        padding: 30px;
+
+    } 
+}
